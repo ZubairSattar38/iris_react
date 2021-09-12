@@ -21,7 +21,7 @@ function Creativity() {
     return (
         <div style={styles.belowSlider}>
             <div style={styles.textAnimation}>
-                <hr style={styles.separator}/>
+                {/* <hr style={styles.separator}/> */}
                 {title}
             </div>
             <div style={styles.multiButton}>
