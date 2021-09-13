@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from "./Navbar";
-
+import { COLORS } from "../../Color";
+import './Slider.css'
 function SliderText() {
     const titles = [
         'CREATIVE', 'INSPIRING', 'PLAYFUL'
@@ -23,11 +23,14 @@ function SliderText() {
 
     return (
         <div style={styles.slider}>
-            <div style={styles.sliderText_1}>
+            {/* <div style={styles.sliderText_1}>
                 <p>  Welcome to Iris.</p>
-            </div>
+            </div> */}
             <div style={styles.sliderText_2}>
                 <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span style={{color:"#cacccf"}}>{title}</span> <br /> VISION</h1>
+            </div>
+            <div className="moveArrow">
+            <img src="https://codingpixel.com/wp-content/themes/cp-theme/images/capsule_img1.png"/>
             </div>
         </div>
     )
@@ -35,18 +38,22 @@ function SliderText() {
 const styles = {
     slider: {
         marginLeft: "10em",
-        marginTop: "7em"
-
+        marginTop: "7em",
+        alignItems:"center",
+        justifyContent:"center"
     },
     sliderText_1: {
         fontSize: 20,
         fontWeight: 800,
-        color: 'white',
+        color: COLORS.white,
+        flex:1
     },
     sliderText_2: {
         fontSize: 30,
         fontWeight: 800,
-        color: 'white',
+        color: COLORS.white,
+        flex:1
+
     },
 
 

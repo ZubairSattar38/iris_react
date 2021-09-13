@@ -1,7 +1,7 @@
 import React,{component} from "react";
 import NavBar from "./Navbar";
 import SliderText from "./SliderText";
-
+import { COLORS } from "../../Color";
 class Slider extends React.Component{
     render(){
         return (
@@ -16,15 +16,12 @@ class Slider extends React.Component{
 }
 const styles={
     slider: {
-        background:'#6723DB',
+        background:COLORS.black,
         height:'100vh',
-        // marginTop:-25
     },
     sliderText:{
         display:'flex',
         flex:1
-        // justifyContent: 'center',
-        // alignItems: 'center',
     }
 }
 export default Slider;

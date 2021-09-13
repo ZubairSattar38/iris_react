@@ -21,7 +21,7 @@ function Creativity() {
     return (
         <div style={styles.belowSlider}>
             <div style={styles.textAnimation}>
-                {/* <hr style={styles.separator}/> */}
+                <hr style={styles.separator}/>
                 {title}
             </div>
             <div style={styles.multiButton}>
@@ -63,7 +63,8 @@ const styles = {
         flex: 1.5
     },
     btnContainer: {
-        display: 'flex'
+        display: 'flex',
+        marginTop: "6%"
     },
     creativity: {
         flex: 1
@@ -77,7 +78,7 @@ const styles = {
         width: "32%",
         height: "40%",
         fontSize: 17,
-        fontWeight: 800
+        fontWeight: 800,
     },
     separator:{
         width:"20%",

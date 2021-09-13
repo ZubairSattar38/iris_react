@@ -1,0 +1,11 @@
+.moveArrow {
+    animation-name : mymove;
+    animation-iteration-count : infinite;
+    animation-direction : alternate;
+    animation-duration : 1s;
+  }
+  
+  @keyframes mymove {
+    from {transform: translateX(0px);}
+    to {transform: translateX(20px);}
+  }

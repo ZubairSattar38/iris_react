@@ -1,4 +1,5 @@
 import React,{component} from "react";
+import { COLORS } from "../../Color";
 
 class NavBar extends React.Component{
     render(){
@@ -23,11 +24,13 @@ const styles={
         flex:1,
         marginTop: 13,
         marginLeft:10,
+        color:COLORS.white
     },
     menu:{
         marginTop: 13,
         marginRight:10,
-     
+        color:COLORS.white
+
     }
 }
 export default NavBar;
