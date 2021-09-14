@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../Color';
 
-function OurWork() {
+function WhatTheySay() {
     return (
-        <div style={styles.ourWork} >
+        <div style={styles.WhatTheySay} >
             <div style={styles.leftSide}>
-                <div style={styles.ourService}>
-                    <p>OUR WORK</p>
-                </div>
+
                 <div style={styles.title}>
-                    <span>We Love <br /> &emsp; &emsp; Our Work</span>
+                    <span>What <br /> &emsp; &emsp; They Say</span>
                 </div>
             </div>
             <div style={styles.multiButton}>
                 <div style={styles.desc}>
                     <p>
-                        With hundreds of projects completed for industry-leading clients, we’ve done almost every type of project. Many of which became award winners and made us proud.
+                        Happy Clients Whom We Were Pleased To Work With
                     </p>
                 </div>
             </div>
@@ -23,12 +21,11 @@ function OurWork() {
     )
 }
 const styles = {
-    ourWork: {
+    WhatTheySay: {
         display: 'flex',
-        background: COLORS.white,
+        background: COLORS.midGrey,
         alignItems: 'center',
-        height:'40vh'
-
+        height:'30vh'
     },
     ourService: {
         fontSize: 15,
@@ -52,4 +49,4 @@ const styles = {
         width: '70%'
     }
 }
-export default OurWork;
+export default WhatTheySay;
