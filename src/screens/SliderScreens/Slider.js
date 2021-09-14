@@ -6,6 +6,8 @@ class Slider extends React.Component{
     render(){
         return (
             <div style={styles.slider}>
+                            {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
+
                 <NavBar/>
                 <div style={styles.sliderText}>
                 <SliderText/>

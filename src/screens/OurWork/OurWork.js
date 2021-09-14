@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../Color';
+
 function OurWork() {
     return (
-        <div style={styles.ourWork}>
+        <div style={styles.ourWork} >
             <div style={styles.leftSide}>
                 <div style={styles.ourService}>
                     <p>OUR WORK</p>
