@@ -41,7 +41,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'flex-end',
 
-        paddingLeft: '5%'
+        paddingLeft: '7%'
 
 
     }
