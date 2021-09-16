@@ -39,7 +39,10 @@ const styles = {
         margin: 5,
         padding: 10,
         display: 'flex',
-        justifyContent:'flex-end'
+        justifyContent: 'flex-end',
+
+        paddingLeft: '7%'
+
 
     }
 
