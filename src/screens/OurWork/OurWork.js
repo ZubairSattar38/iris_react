@@ -27,7 +27,7 @@ const styles = {
         display: 'flex',
         background: COLORS.white,
         alignItems: 'center',
-        height:'40vh'
+        // height:'40vh'
 
     },
     ourService: {

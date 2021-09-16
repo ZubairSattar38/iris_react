@@ -21,7 +21,11 @@ const styles = {
         flexDirection: 'column',
         padding:20,
         borderRadius:10,
-        width:'50vh',
+        width: '50vh'
+        // width: '25%',
+
+
+        // width:'80vh',
     },
     image:{
         flex: 1,

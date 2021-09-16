@@ -46,7 +46,6 @@ const styles = {
     belowSlider: {
         background: '#FAFAFA',
         display: 'flex',
-        height: "40vh",
         paddingTop: "5%",
         paddingBottom:"5%"
     },
