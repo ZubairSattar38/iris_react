@@ -1,29 +1,46 @@
-import React,{component} from "react";
+import React, { component } from "react";
 import NavBar from "./Navbar";
 import SliderText from "./SliderText";
-import { COLORS } from "../../Color";
-class Slider extends React.Component{
-    render(){
+import { COLORS, IMAGES } from "../../GlobalVariables";
+import logo from '../../images/lighteyez.png'
+import './Slider.css'
+class Slider extends React.Component {
+    render() {
         return (
             <div style={styles.slider}>
-                            {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
-
-                <NavBar/>
-                <div style={styles.sliderText}>
-                <SliderText/>
+                {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
+                <NavBar />
+                <div style={styles.textLogoWrapper}>
+                    <div style={styles.sliderText}>
+                        <SliderText />
+                    </div>
+                    <div className="moveArrow" style={styles.sliderLogo}>
+                        <img src={logo} style={{ width: '80%' ,opacity:'0.07'}} />
+                    </div>
                 </div>
             </div>
         )
     }
 }
-const styles={
-    slider: {
-        background:COLORS.black,
-        height:'100vh',
+
+const styles = {
+    textLogoWrapper: {
+        display: 'flex',
+        alignItems: 'center'
     },
-    sliderText:{
-        display:'flex',
-        flex:1
+    slider: {
+        background: COLORS.black,
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100vh',
+    },
+    sliderText: {
+        flex: 1,
+        // alignItems:'center',
+
+    },
+    sliderLogo: {
+        flex: 1,
     }
 }
 export default Slider;

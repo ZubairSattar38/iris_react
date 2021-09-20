@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../Color';
+import { COLORS } from '../../GlobalVariables';
 import Reviews from './Reviews';
 
 function WhatTheySay() {

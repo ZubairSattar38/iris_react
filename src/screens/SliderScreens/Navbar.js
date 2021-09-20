@@ -1,5 +1,5 @@
 import React,{component} from "react";
-import { COLORS } from "../../Color";
+import { COLORS } from "../../GlobalVariables";
 
 class NavBar extends React.Component{
     render(){

@@ -1,4 +1,6 @@
-
+export const IMAGES ={
+  lightEyez:'./images/lighteyez.png'
+}
 export const COLORS = {
     white: '#fff',
     black: '#000',

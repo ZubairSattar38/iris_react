@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS } from "../../Color";
-import './Slider.css'
+import { COLORS,IMAGES } from "../../GlobalVariables";
+// import logo from '../../images/lighteyez.png'
+// import './Slider.css'
+
 function SliderText() {
     const titles = [
         'CREATIVE', 'INSPIRING', 'PLAYFUL'
@@ -29,9 +31,9 @@ function SliderText() {
             <div style={styles.sliderText_2}>
                 <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span style={{color:"#cacccf"}}>{title}</span> <br /> VISION</h1>
             </div>
-            <div className="moveArrow">
-            <img src="https://codingpixel.com/wp-content/themes/cp-theme/images/capsule_img1.png"/>
-            </div>
+            {/* <div className="moveArrow">
+            <img src={logo} style={{width:'10%'}}/>
+            </div> */}
         </div>
     )
 }

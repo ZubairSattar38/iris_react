@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import './Button.css'
 function Creativity() {
     const titles = [
-        'Fast', 'Responsive', 'Trendy','Custom','Quality','Create'
+        'Fast', 'Responsive', 'Trendy', 'Custom', 'Quality', 'Create'
     ]
     let value = 0;
     useEffect(() => {
@@ -21,7 +22,7 @@ function Creativity() {
     return (
         <div style={styles.belowSlider}>
             <div style={styles.textAnimation}>
-                <hr style={styles.separator}/>
+                <hr style={styles.separator} />
                 {title}
             </div>
             <div style={styles.multiButton}>
@@ -31,10 +32,13 @@ function Creativity() {
                 <div style={styles.btnContainer}>
                     <div style={styles.creativity}>
                         <button style={styles.btn}>Creativity</button>
+                      
+
+
                         <p style={{ paddingRight: "11%" }}>Trendy, Modish, Interactive, Stylish, Posh, Trendsetter, Super Cool, Elegant, Classy & Modern Designs & User Experiences</p>
                     </div>
                     <div style={styles.technology}>
-                        <button style={styles.btn}>Technology</button>
+                        {/* <button style={styles.btn}>Technology</button> */}
                         <p>Custom Website Design, Native Mobile Apps Development, E-Commerce Development, Bespoke Software Development.</p>
                     </div>
                 </div>
@@ -47,12 +51,12 @@ const styles = {
         background: '#FAFAFA',
         display: 'flex',
         paddingTop: "5%",
-        paddingBottom:"5%"
+        paddingBottom: "5%"
     },
     textAnimation: {
         flex: 1,
         textAlign: "center",
-        alignSelf:"center",
+        alignSelf: "center",
         fontSize: 45,
         fontWeight: 800
     },
@@ -79,10 +83,10 @@ const styles = {
         fontSize: 17,
         fontWeight: 800,
     },
-    separator:{
-        width:"20%",
-        marginLeft:"31%",
-        color:"#6723DB"
+    separator: {
+        width: "20%",
+        marginLeft: "31%",
+        color: "#6723DB"
     }
 }
 export default Creativity;
