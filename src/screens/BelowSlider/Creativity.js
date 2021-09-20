@@ -15,7 +15,7 @@ function Creativity() {
                 value = 0;
                 // setValue(0);
             }
-        }, 200);
+        }, 500);
         return () => clearInterval(interval);
     }, []);
     const [title, setTitle] = useState("");
@@ -38,7 +38,7 @@ function Creativity() {
                         <p style={{ paddingRight: "11%" }}>Trendy, Modish, Interactive, Stylish, Posh, Trendsetter, Super Cool, Elegant, Classy & Modern Designs & User Experiences</p>
                     </div>
                     <div style={styles.technology}>
-                        {/* <button style={styles.btn}>Technology</button> */}
+                        <button style={styles.btn}>Technology</button>
                         <p>Custom Website Design, Native Mobile Apps Development, E-Commerce Development, Bespoke Software Development.</p>
                     </div>
                 </div>
