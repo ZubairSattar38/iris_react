@@ -1,7 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
 import Services from './Services';
+import { useMediaQuery } from 'react-responsive';
+
 function WhatWeDo() {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 983px)'
+    })
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
+
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
+    const styles = {
+        whatWeDo: {
+            display: 'flex',
+            flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'row' : 'column'
+        },
+        ourService: {
+            fontSize: 15,
+            fontWeight: 800
+        },
+        leftSide: {
+            // flex: 1,
+            flex: '30%',
+            flexWrap: 'wrap',
+            paddingTop: '2%',
+            textAlign: "center",
+        },
+        title: {
+            fontSize: '3.5rem',
+            fontWeight: 800
+        },
+        multiButton: {
+            background: COLORS.black,
+            // flex: 1.5,
+            flex: '70%',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'space-between',
+            padding: '2%',
+        },
+        item: {
+            flex: isTabletOrMobile ? '100%' : '33%',
+        },
+        desc: {
+            width: '55%',
+            float: 'center',
+            textAlign: 'center',
+            float: 'right',
+            paddingRight: '16%',
+            textAlign: 'justify'
+        },
+    }
+
     return (
         <div style={styles.whatWeDo}>
             <div style={styles.leftSide}>
@@ -15,6 +68,7 @@ function WhatWeDo() {
                     <p>With immense experience, Coding Pixel is the leading provider of software, app and web development projects in USA. Coding Pixel can help you achieve hard to reach goals.</p>
                 </div>
             </div>
+
             <div style={styles.multiButton}>
                 <div style={styles.item}>
                     <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/blockchain-1.png&nocache=1" title='Blockchain Development' desc='Coding pixel is a blockchain development company in USA with comprehensive knowledge of blockchain technology,' />
@@ -40,42 +94,36 @@ function WhatWeDo() {
             </div>
         </div>
     )
+
+
+
 }
-const styles = {
-    whatWeDo: {
-        display: 'flex',
-    },
-    ourService: {
-        fontSize: 15,
-        fontWeight: 800
-    },
-    leftSide: {
-        flex: 1,
-        paddingTop:'2%',
-        textAlign: "center",
-    },
-    title: {
-        fontSize: '3.5rem',
-        fontWeight: 800
-    },
-    multiButton: {
-        background: COLORS.black,
-        flex: 1.5,
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems:'space-between',
-        padding:'2%',
-    },
-    item:{
-        width: '33%'
-    },
-    desc: {
-        width: '55%',
-        float: 'center',
-        textAlign: 'center',
-        float: 'right',
-        paddingRight: '16%',
-        textAlign: 'justify'
-    },
-}
+
+
 export default WhatWeDo;
+
+
+
+// ourWork: {
+//     display: 'flex',
+//     justifyContent: 'center',
+//     flexWrap: 'wrap',
+
+// },
+// rightCard: {
+//     flex: '50%',
+//     margin: 5,
+//     padding: 10,
+//     // justifyContent:'flex-start'
+// },
+// leftCard: {
+//     flex: '40%',
+//     margin: 5,
+//     padding: 10,
+//     display: 'flex',
+//     justifyContent: 'flex-end',
+
+//     paddingLeft: '4%'
+
+
+// }
