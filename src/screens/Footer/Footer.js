@@ -1,7 +1,62 @@
 import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
+import { useMediaQuery } from 'react-responsive';
 
 function Footer() {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 983px)'
+    })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
+
+
+    const styles = {
+
+        btn: {
+            backgroundColor: "black",
+            color: "white",
+            width: "32%",
+            height: "40%",
+            fontSize: 17,
+            fontWeight: 800,
+        },
+        Footer: {
+            background: COLORS.black,
+            display: 'flex',
+            // flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'row' : 'column',
+            height: '40vh',
+        },
+        iris: {
+            fontSize: 15,
+            fontWeight: 800,
+            flex: 1
+        },
+        leftSide: {
+            flex: 1,
+            color: COLORS.white,
+            paddingTop: '2%',
+            paddingLeft: '12%',
+            display: 'flex',
+            flexDirection: 'column'
+        },
+        title: {
+            fontSize: '3.5rem',
+            fontWeight: 800
+        },
+        multiButton: {
+            flex: 2,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            color: COLORS.white
+        },
+        desc: {
+            color: COLORS.white,
+            fontSize: '0.8rem',
+            width: '70%',
+            textAlign: 'end'
+        }
+    }
+
     return (
         <div style={styles.Footer} >
             <div style={styles.leftSide}>
@@ -33,51 +88,5 @@ function Footer() {
         </div>
     )
 }
-const styles = {
 
-    btn: {
-        backgroundColor: "black",
-        color: "white",
-        width: "32%",
-        height: "40%",
-        fontSize: 17,
-        fontWeight: 800,
-    },
-    Footer: {
-        background: COLORS.black,
-        display: 'flex',
-        height: '40vh',
-        flexDirection:'row'
-    },
-    iris: {
-        fontSize: 15,
-        fontWeight: 800,
-        flex: 1
-    },
-    leftSide: {
-        flex: 1,
-        color: COLORS.white,
-        paddingTop: '2%',
-        paddingLeft: '12%',
-        display: 'flex',
-        flexDirection: 'column'
-    },
-    title: {
-        fontSize: '3.5rem',
-        fontWeight: 800
-    },
-    multiButton: {
-        flex: 2,
-        display: 'flex',
-        alignItems:'center',
-        justifyContent:'space-around',
-        color: COLORS.white
-    },
-    desc: {
-        color: COLORS.white,
-        fontSize: '0.8rem',
-        width: '70%',
-        textAlign: 'end'
-    }
-}
 export default Footer;
