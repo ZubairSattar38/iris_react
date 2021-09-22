@@ -7,12 +7,7 @@ function WhatWeDo() {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
     })
-    const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
-
-    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-
     const styles = {
         whatWeDo: {
             display: 'flex',
@@ -23,19 +18,18 @@ function WhatWeDo() {
             fontWeight: 800
         },
         leftSide: {
-            // flex: 1,
             flex: '30%',
             flexWrap: 'wrap',
             paddingTop: '2%',
-            textAlign: "center",
+            textAlign: !isTabletOrMobile && isDesktopOrLaptop && "center",
+            paddingLeft: !isDesktopOrLaptop && '5%'
         },
         title: {
-            fontSize: '3.5rem',
+            fontSize: isTabletOrMobile ? '2rem' : '3.5rem',
             fontWeight: 800
         },
         multiButton: {
             background: COLORS.black,
-            // flex: 1.5,
             flex: '70%',
             display: 'flex',
             flexWrap: 'wrap',
@@ -46,7 +40,7 @@ function WhatWeDo() {
             flex: isTabletOrMobile ? '100%' : '33%',
         },
         desc: {
-            width: '55%',
+            width: !isTabletOrMobile && isDesktopOrLaptop && '55%',
             float: 'center',
             textAlign: 'center',
             float: 'right',
@@ -62,7 +56,7 @@ function WhatWeDo() {
                     <p>OUR SERVICE</p>
                 </div>
                 <div style={styles.title}>
-                    <span>What <br /> &emsp; &emsp; We Do</span>
+                    <span>What <br /> &emsp; &nbsp; We Do</span>
                 </div>
                 <div style={styles.desc}>
                     <p>With immense experience, Coding Pixel is the leading provider of software, app and web development projects in USA. Coding Pixel can help you achieve hard to reach goals.</p>
@@ -94,36 +88,5 @@ function WhatWeDo() {
             </div>
         </div>
     )
-
-
-
 }
-
-
 export default WhatWeDo;
-
-
-
-// ourWork: {
-//     display: 'flex',
-//     justifyContent: 'center',
-//     flexWrap: 'wrap',
-
-// },
-// rightCard: {
-//     flex: '50%',
-//     margin: 5,
-//     padding: 10,
-//     // justifyContent:'flex-start'
-// },
-// leftCard: {
-//     flex: '40%',
-//     margin: 5,
-//     padding: 10,
-//     display: 'flex',
-//     justifyContent: 'flex-end',
-
-//     paddingLeft: '4%'
-
-
-// }

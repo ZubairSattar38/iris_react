@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
-function Services(props) {
 
+function Services(props) {
+    
     return (
         <div style={styles.container}>
             <div>
-                <img src={props.image}/>
+                <img src={props.image} />
             </div>
             <div style={styles.title}>
                 <h3>{props.title}</h3>
@@ -27,9 +28,9 @@ const styles = {
         fontSize: 20,
         fontWeight: 700
     },
-    desc:{
+    desc: {
         fontSize: '0.8rem'
     }
-    
+
 }
 export default Services;

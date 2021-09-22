@@ -8,10 +8,13 @@ function SliderText() {
         query: '(min-width: 983px)'
     })
     const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 820px)' })
 
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
+    const isLargeScaleTablet = useMediaQuery({ query: '(max-width: 1092px)' })
+
     const titles = [
         'CREATIVE', 'INSPIRING', 'PLAYFUL'
     ]
@@ -32,8 +35,9 @@ function SliderText() {
     const [title, setTitle] = useState("");
     const styles = {
         slider: {
-            marginLeft: isTabletOrMobile?"3em":"7em",
-            marginTop: "3em",
+            marginLeft: isTabletOrMobile?"1.5em":"7em",
+            marginTop: isTabletOrMobile?"2em":"3em",
+            marginBottom: isTabletOrMobile&&"2em",
             alignItems: "center",
             justifyContent: "center",
 
@@ -46,7 +50,7 @@ function SliderText() {
 
         },
         sliderText_2: {
-            fontSize: isTabletOrMobile?20:30,
+            fontSize: isTabletOrMobile?10:isLargeScaleTablet?20:30,
             fontWeight: isTabletOrMobile?500:800,
             color: COLORS.white,
             flex: 1,
@@ -68,11 +72,7 @@ function SliderText() {
             </div>
             <div style={styles.sliderText_2}>
                 <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span> <br /> VISION</h1>
-
             </div>
-            {/* <div className="moveArrow">
-            <img src={logo} style={{width:'10%'}}/>
-            </div> */}
         </div>
     )
 

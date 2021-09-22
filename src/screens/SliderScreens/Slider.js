@@ -6,59 +6,62 @@ import logo from '../../images/lighteyez.png'
 import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
 
-function Slider (){
+function Slider() {
 
-        const isDesktopOrLaptop = useMediaQuery({
-            query: '(min-width: 983px)'
-        })
-        const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-        const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 983px)'
+    })
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1114px)' })
 
-        const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-        const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+    const isLargeScaleTablet = useMediaQuery({ query: '(min-width: 1092px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
 
-        const styles = {
-            textLogoWrapper: {
-                display: 'flex',
-                alignItems: 'center',
-                flexWrap: 'wrap'
-            },
-            slider: {
-                background: COLORS.black,
-                // display: 'flex',
-                // flexDirection: 'column',
-                // height: '100vh',
-                flexWrap: 'wrap'
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
-            },
-            sliderText: {
-                flex: 1,
-                // alignItems:'center',
-                flexWrap: 'wrap'
+    const styles = {
+        textLogoWrapper: {
+            display: 'flex',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            marginTop:'2%'
+        },
+        slider: {
+            background: COLORS.black,
+            // display: 'flex',
+            // flexDirection: 'column',
+            height: isBigScreen && '100vh',
+            flexWrap: 'wrap'
+
+        },
+        sliderText: {
+            flex: 1,
+            // alignItems:'center',
+            flexWrap: 'wrap'
 
 
-            },
-            sliderLogo: {
-                flex: 1,
-            }
+        },
+        sliderLogo: {
+            flex: 1,
         }
+    }
 
 
-        return (
-            <div style={styles.slider}>
-                {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
-                <NavBar />
-                <div style={styles.textLogoWrapper}>
-                    <div style={styles.sliderText}>
-                        <SliderText />
-                    </div>
-                    <div className="moveArrow" style={styles.sliderLogo}>
-                        <img src={logo} style={{ width: isTabletOrMobile?'50%':'80%', opacity: '0.07' }} />
-                    </div>
+    return (
+        <div style={styles.slider}>
+            {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
+            <NavBar />
+            <div style={styles.textLogoWrapper}>
+                <div style={styles.sliderText}>
+                    <SliderText />
+                </div>
+                <div className="moveArrow" style={styles.sliderLogo}>
+                    <img src={logo} style={{ width: isTabletOrMobile ? '50%' : '60%', opacity: '0.07' }} />
                 </div>
             </div>
-        )
-    
+        </div>
+    )
+
 }
 
 
