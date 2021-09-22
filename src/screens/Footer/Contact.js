@@ -58,7 +58,7 @@ function ContactFooter() {
             color:COLORS.white,
             fontSize: '0.8rem',
             // width: '70%',
-            textAlign: 'end'
+            textAlign: 'center'
         }
     }
 
