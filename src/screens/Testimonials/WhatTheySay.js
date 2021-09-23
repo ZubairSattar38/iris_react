@@ -11,7 +11,7 @@ function WhatTheySay(props) {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 820px)' })
     const styles = {
         Review: {
-            background: `linear-gradient(to bottom, ${props.state.midGrey} 0%,  ${props.state.midGrey} 50%, ${props.state.primaryText} 50%, ${props.state.primaryText} 100%)`,
+            background: `linear-gradient(to bottom, ${props.state.midGrey} 0%,  ${props.state.midGrey} 50%, ${props.state.secondaryColor} 50%, ${props.state.secondaryColor} 100%)`,
 
         },
         WhatTheySay: {

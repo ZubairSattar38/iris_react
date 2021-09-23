@@ -31,9 +31,9 @@ const ColorReducer = (state = initialState, action) => {
                 ...state,
                 isDark: action.payload,
                 primaryText: action.payload?'#000':'#fff',
-                primaryColor: action.payload?'#fff':'#000',
-                secondaryColor: action.payload?'#000':'#fff',
-                secondaryText: action.payload?'#fff':'#000',
+                primaryColor: action.payload?'#F2F2F2':'#000',
+                secondaryColor: action.payload?'#fff':'#fff',
+                secondaryText: action.payload?'#000':'#000',
                 logoImage: action.payload?darkLogo:lightLogo
                 // isFail:false
             }
