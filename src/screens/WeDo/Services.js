@@ -2,7 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
 
 function Services(props) {
-    
+    const styles = {
+        container: {
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '7%',
+            color: props.state.primaryText,
+        },
+        title: {
+            fontSize: 20,
+            fontWeight: 700
+        },
+        desc: {
+            fontSize: '0.8rem'
+        }
+
+    }
     return (
         <div style={styles.container}>
             <div>
@@ -17,20 +32,5 @@ function Services(props) {
         </div>
     )
 }
-const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        padding: '7%',
-        color: 'white',
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 700
-    },
-    desc: {
-        fontSize: '0.8rem'
-    }
 
-}
 export default Services;

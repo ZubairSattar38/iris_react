@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
 import { useMediaQuery } from 'react-responsive';
 
-function Footer() {
+function Footer(props) {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
     })
@@ -12,7 +12,7 @@ function Footer() {
     const styles = {
 
         btn: {
-            backgroundColor: "black",
+            backgroundColor: props.state.primaryColor,
             color: "white",
             width: "32%",
             height: "40%",
@@ -20,7 +20,7 @@ function Footer() {
             fontWeight: 800,
         },
         Footer: {
-            background: COLORS.black,
+            background: props.state.primaryColor,
             display: 'flex',
             // flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'row' : 'column',
             height: '40vh',
@@ -32,7 +32,7 @@ function Footer() {
         },
         leftSide: {
             flex: 1,
-            color: COLORS.white,
+            color: props.state.primaryText,
             paddingTop: '2%',
             paddingLeft: '12%',
             display: 'flex',
@@ -47,10 +47,10 @@ function Footer() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-around',
-            color: COLORS.white
+            color: props.state.primaryText
         },
         desc: {
-            color: COLORS.white,
+            color: props.state.primaryText,
             fontSize: '0.8rem',
             width: '70%',
             textAlign: 'end'

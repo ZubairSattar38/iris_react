@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
 import { useMediaQuery } from 'react-responsive';
 
-function ContactFooter() {
+function ContactFooter(props) {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
     })
@@ -13,11 +13,10 @@ function ContactFooter() {
         wrapper: {
             backgroundImage: `url("https://htmlcssmonk.com/wp-content/uploads/2020/12/screen-post-LJUaTzKtFNc-unsplash-1024x640.jpg")`,
             objectFit: 'cover',
-    
         },
         btn: {
-            backgroundColor: "black",
-            color: "white",
+            backgroundColor: props.state.primaryColor,
+            color: props.state.primaryText,
             width: isTabletOrMobile?"100%":"32%",
             height: "40%",
             fontSize: 17,
@@ -25,7 +24,7 @@ function ContactFooter() {
             padding: "4%"
         },
         ContactFooter: {
-            background: COLORS.black,
+            background: props.state.primaryColor,
             opacity: 0.8,
             display: 'flex',
             flexDirection: isTabletOrMobile&&'column',
@@ -41,7 +40,7 @@ function ContactFooter() {
         },
         leftSide: {
             flex: 1,
-            color:COLORS.white,
+            color:props.state.primaryText,
             paddingTop: '2%',
             paddingLeft: isTabletOrMobile?'4%':'12%'
         },
@@ -55,7 +54,7 @@ function ContactFooter() {
             margin:'2%'
         },
         desc: {
-            color:COLORS.white,
+            color:props.state.primaryText,
             fontSize: '0.8rem',
             // width: '70%',
             textAlign: 'center'

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
 import { useMediaQuery } from 'react-responsive';
 
-function OurWork() {
+function OurWork(props) {
 
     const isDesktopOrLaptop = useMediaQuery({
         query: '(max-width: 980px)'
@@ -17,7 +17,6 @@ function OurWork() {
     const styles = {
         ourWork: {
             display: 'flex',
-            background: COLORS.white,
             alignItems: isTabletOrMobile ?'left':isDesktopOrLaptop &&'left',
             alignItems: !isTabletOrMobile && !isDesktopOrLaptop &&'center',
             flexDirection: isTabletOrMobile ?'column':isDesktopOrLaptop?'column':'row',
@@ -25,7 +24,9 @@ function OurWork() {
         },
         ourService: {
             fontSize: 15,
-            fontWeight: 800
+            fontWeight: 800,
+            color:props.state.secondaryText
+
         },
         leftSide: {
             flex: 1,
@@ -33,10 +34,12 @@ function OurWork() {
         },
         title: {
             fontSize: isTabletOrMobile ? '2rem' : '3.5rem',
-            fontWeight: 800
+            fontWeight: 800,
+            color:props.state.secondaryText
         },
         multiButton: {
             flex: 1.5,
+            color:props.state.secondaryText,
             paddingLeft: '10%',
         },
         desc: {

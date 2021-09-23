@@ -17,7 +17,7 @@ function Reviews(props) {
         },
         review: {
             display: 'flex',
-            backgroundColor: COLORS.black,
+            backgroundColor: props.state.primaryColor,
             flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'column' : 'row',
             margin: isTabletOrMobile ? '4%' : isDesktopOrLaptop ? '4%' : '',
 
@@ -31,7 +31,7 @@ function Reviews(props) {
             flexDirection: 'column',
             width: '50%',
             paddingLeft: 20,
-            color: COLORS.white,
+            color: props.state.primaryText,
 
         },
         review_Wrapper: {
@@ -51,7 +51,7 @@ function Reviews(props) {
             fontSize: '0.8rem',
             width: '80%',
             paddingLeft: '3%',
-            color: COLORS.white
+            color: props.state.primaryText
         }
     }
     return (

@@ -1,8 +1,25 @@
 import React,{component} from "react";
 import { COLORS } from "../../GlobalVariables";
 
-class NavBar extends React.Component{
-    render(){
+function NavBar (props){
+    const styles={
+        navbar: {
+            display:"flex",
+            flexWrap:'wrap',
+        },
+        logo:{
+            flex:1,
+            marginTop: 13,
+            marginLeft:10,
+            color:props.state.primaryText
+        },
+        menu:{
+            marginTop: 13,
+            marginRight:10,
+            color:props.state.primaryText
+    
+        }
+    }
         return (
             <div style={styles.navbar}>
                 <div style={styles.logo}>
@@ -13,24 +30,6 @@ class NavBar extends React.Component{
                 </div>
             </div>
         )
-    }
 }
-const styles={
-    navbar: {
-        display:"flex",
-        flexWrap:'wrap',
-    },
-    logo:{
-        flex:1,
-        marginTop: 13,
-        marginLeft:10,
-        color:COLORS.white
-    },
-    menu:{
-        marginTop: 13,
-        marginRight:10,
-        color:COLORS.white
 
-    }
-}
 export default NavBar;

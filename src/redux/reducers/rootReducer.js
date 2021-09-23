@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
-import LoginReducer from "./colorReducer";
+import ColorReducer from "./colorReducer";
 const rootReducer = combineReducers({
-    login:LoginReducer,   
+    color:ColorReducer,   
 })
-
 export default rootReducer;

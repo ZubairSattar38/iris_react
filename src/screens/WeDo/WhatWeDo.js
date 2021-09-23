@@ -3,7 +3,7 @@ import { COLORS } from '../../GlobalVariables';
 import Services from './Services';
 import { useMediaQuery } from 'react-responsive';
 
-function WhatWeDo() {
+function WhatWeDo(props) {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
     })
@@ -21,6 +21,7 @@ function WhatWeDo() {
             flex: '30%',
             flexWrap: 'wrap',
             paddingTop: '2%',
+            color:props.state.secondaryText,
             textAlign: !isTabletOrMobile && isDesktopOrLaptop && "center",
             paddingLeft: !isDesktopOrLaptop && '5%'
         },
@@ -29,7 +30,7 @@ function WhatWeDo() {
             fontWeight: 800
         },
         multiButton: {
-            background: COLORS.black,
+            background: props.state.primaryColor,
             flex: '70%',
             display: 'flex',
             flexWrap: 'wrap',
@@ -65,24 +66,24 @@ function WhatWeDo() {
 
             <div style={styles.multiButton}>
                 <div style={styles.item}>
-                    <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/blockchain-1.png&nocache=1" title='Blockchain Development' desc='Coding pixel is a blockchain development company in USA with comprehensive knowledge of blockchain technology,' />
+                    <Services state={props.state} image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/blockchain-1.png&nocache=1" title='Blockchain Development' desc='Coding pixel is a blockchain development company in USA with comprehensive knowledge of blockchain technology,' />
                 </div>
                 <div style={styles.item}>
-                    <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/mob-app.png&nocache=1" title='MobileApp Development' desc='Coding Pixel is an App Development Company in Los Angeles Best Mobile App development company in Los Angeles, CA for (iPhone, Android & iPad) mobile apps and mobile games development' />
+                    <Services state={props.state} image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/mob-app.png&nocache=1" title='MobileApp Development' desc='Coding Pixel is an App Development Company in Los Angeles Best Mobile App development company in Los Angeles, CA for (iPhone, Android & iPad) mobile apps and mobile games development' />
                 </div>
                 <div style={styles.item}>
-                    <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/backend-1.png&nocache=1" title='Laravel Development' desc='We’ve been in the US market as Laravel development experts for more than five years now, we choose to work with Laravel because we know live in the world of technology' />
+                    <Services state={props.state} image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/backend-1.png&nocache=1" title='Laravel Development' desc='We’ve been in the US market as Laravel development experts for more than five years now, we choose to work with Laravel because we know live in the world of technology' />
                 </div>
 
 
                 <div style={styles.item}>
-                    <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/shopify-1.png&nocache=1" title='Shopify Development' desc='Our certified Shopify developers and Shopify store web designers work exclusively on the Shopify platform to build beautiful custom-tailored eCommerce storefront' />
+                    <Services state={props.state} image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/shopify-1.png&nocache=1" title='Shopify Development' desc='Our certified Shopify developers and Shopify store web designers work exclusively on the Shopify platform to build beautiful custom-tailored eCommerce storefront' />
                 </div>
                 <div style={styles.item}>
-                    <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/ux-1.png&nocache=1" title='Wordpress Development' desc='A WordPress developer is a programmer who makes websites, plugins, and themes for the WordPress platform' />
+                    <Services state={props.state} image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/ux-1.png&nocache=1" title='Wordpress Development' desc='A WordPress developer is a programmer who makes websites, plugins, and themes for the WordPress platform' />
                 </div>
                 <div style={styles.item}>
-                    <Services image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/web-1.png&nocache=1" title='Website Development' desc='Website development company los angeles (la), hire top website developers, website designers & website programmers in los angeles' />
+                    <Services state={props.state} image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/web-1.png&nocache=1" title='Website Development' desc='Website development company los angeles (la), hire top website developers, website designers & website programmers in los angeles' />
                 </div>
 
             </div>

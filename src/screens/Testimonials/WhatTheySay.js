@@ -4,20 +4,20 @@ import Reviews from './Reviews';
 import { useMediaQuery } from 'react-responsive';
 
 
-function WhatTheySay() {
+function WhatTheySay(props) {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(max-width: 1100px)'
     })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 820px)' })
     const styles = {
         Review: {
-            background: `linear-gradient(to bottom, ${COLORS.midGrey} 0%,  ${COLORS.midGrey} 50%, ${COLORS.white} 50%, ${COLORS.white} 100%)`,
+            background: `linear-gradient(to bottom, ${props.state.midGrey} 0%,  ${props.state.midGrey} 50%, ${props.state.primaryText} 50%, ${props.state.primaryText} 100%)`,
 
         },
         WhatTheySay: {
 
             display: 'flex',
-            background: COLORS.midGrey,
+            background: props.state.midGrey,
             alignItems: isTabletOrMobile ? 'left' : isDesktopOrLaptop && 'left',
             alignItems: !isTabletOrMobile && !isDesktopOrLaptop && 'center',
             flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'column' : 'row',
@@ -65,7 +65,7 @@ function WhatTheySay() {
                 </div>
             </div>
             <div style={styles.Review}>
-                <Reviews title="JOHN WATSON" image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/profile-img.png&nocache=1" desc="Coding Pixel brought to the table winning strategies that helped take my business to the next level. Our e-commerce efforts are now our leading driver of revenue after less than a year from launch." />
+                <Reviews state={props.state} title="JOHN WATSON" image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/profile-img.png&nocache=1" desc="Coding Pixel brought to the table winning strategies that helped take my business to the next level. Our e-commerce efforts are now our leading driver of revenue after less than a year from launch." />
             </div>
         </div>
     )

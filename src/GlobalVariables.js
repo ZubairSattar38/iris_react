@@ -1,7 +1,13 @@
 import { useMediaQuery } from 'react-responsive';
+import store from './redux/store';
+import lightLogo from './images/lighteyez.png'
+import darkLogo from './images/darkeyez.png'
 
+export const isDark = store.getState().color;
+console.log("store :- ", store.getState().color);
 export const IMAGES ={
-  lightEyez:'./images/lighteyez.png'
+  lightEyez:lightLogo,
+  darkEyez:darkLogo
 }
 export const COLORS = {
     white: '#fff',

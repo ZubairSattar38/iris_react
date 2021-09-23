@@ -2,11 +2,11 @@ import React, { component } from "react";
 import NavBar from "./Navbar";
 import SliderText from "./SliderText";
 import { COLORS, IMAGES } from "../../GlobalVariables";
-import logo from '../../images/lighteyez.png'
+import lightLogo from '../../images/lighteyez.png'
 import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
 
-function Slider() {
+function Slider(props) {
 
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
@@ -18,7 +18,7 @@ function Slider() {
 
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-
+    // alert("Primary Color :- ",props.primaryColor)
     const styles = {
         textLogoWrapper: {
             display: 'flex',
@@ -27,9 +27,7 @@ function Slider() {
             marginTop:'2%'
         },
         slider: {
-            background: COLORS.black,
-            // display: 'flex',
-            // flexDirection: 'column',
+            background: props.state.primaryColor,
             height: isBigScreen && '100vh',
             flexWrap: 'wrap'
 
@@ -50,13 +48,14 @@ function Slider() {
     return (
         <div style={styles.slider}>
             {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
-            <NavBar />
+            <NavBar state={props.state}/>
             <div style={styles.textLogoWrapper}>
                 <div style={styles.sliderText}>
-                    <SliderText />
+                    <SliderText state={props.state}/>
                 </div>
                 <div className="moveArrow" style={styles.sliderLogo}>
-                    <img src={logo} style={{ width: isTabletOrMobile ? '50%' : '60%', opacity: '0.07' }} />
+                    {console.log("props.state.logoImage :- ",props.state.logoImage)}
+                    <img src={props.state.logoImage} style={{ width: isTabletOrMobile ? '50%' : '60%',opacity:'0.2' }} />
                 </div>
             </div>
         </div>

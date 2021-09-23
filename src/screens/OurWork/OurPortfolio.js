@@ -3,7 +3,7 @@ import { COLORS } from '../../GlobalVariables';
 import WorkColumn from './WorkColumn';
 import './Work.css'
 
-function OurPortfolio() {
+function OurPortfolio(props) {
     return (
         <div style={styles.ourWork}>
             <div style={styles.leftCard} className="moveArrow card">

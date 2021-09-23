@@ -3,7 +3,7 @@ import { COLORS, IMAGES } from "../../GlobalVariables";
 import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
 
-function SliderText() {
+function SliderText(props) {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
     })
@@ -32,6 +32,7 @@ function SliderText() {
         }, 500);
         return () => clearInterval(interval);
     }, []);
+    console.log("props Data :- ",props.state.primaryText)
     const [title, setTitle] = useState("");
     const styles = {
         slider: {
@@ -45,14 +46,14 @@ function SliderText() {
         sliderText_1: {
             fontSize: 20,
             fontWeight: 800,
-            color: COLORS.white,
+            color: props.state.primaryText,
             flex: 1,
 
         },
         sliderText_2: {
             fontSize: isTabletOrMobile?10:isLargeScaleTablet?20:30,
             fontWeight: isTabletOrMobile?500:800,
-            color: COLORS.white,
+            color: props.state.primaryText,
             flex: 1,
 
         },
