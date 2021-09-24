@@ -4,7 +4,6 @@ import lightLogo from './images/lighteyez.png'
 import darkLogo from './images/darkeyez.png'
 
 export const isDark = store.getState().color;
-console.log("store :- ", store.getState().color);
 export const IMAGES ={
   lightEyez:lightLogo,
   darkEyez:darkLogo

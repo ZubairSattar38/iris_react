@@ -54,7 +54,6 @@ function Slider(props) {
                     <SliderText state={props.state}/>
                 </div>
                 <div className="moveArrow" style={styles.sliderLogo}>
-                    {console.log("props.state.logoImage :- ",props.state.logoImage)}
                     <img src={props.state.logoImage} style={{ width: isTabletOrMobile ? '50%' : '60%',opacity:'0.2' }} />
                 </div>
             </div>

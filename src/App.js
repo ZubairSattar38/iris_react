@@ -8,56 +8,63 @@ import WhatTheySay from './screens/Testimonials/WhatTheySay';
 import ContactFooter from './screens/Footer/Contact';
 import Footer from './screens/Footer/Footer';
 import { useDispatch } from "react-redux";
-import {colorChange} from "./redux/actions/colorAction";
+import { colorChange } from "./redux/actions/colorAction";
 import store from './redux/store';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import Switch from "react-switch";
 
 // import {isDark} from './GlobalVariables'
 function App() {
   const dispatch = useDispatch();
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
   useEffect(() => {
-    alert("Hello World")
-    dispatch(colorChange(false));
-  },[]);
+    dispatch(colorChange(true));
+  }, []);
   const state = store.getState().color;
 
 
 
-  const handleChange=()=>{
-     setIsToggled(!isToggled)
+  const handleChange = () => {
+    setIsToggled(!isToggled)
     dispatch(colorChange(!isToggled));
 
     // setDark(!isDark);
   }
-  const styles={
-    container:{
-     background:state.secondaryColor
- 
+  const styles = {
+    container: {
+      background: state.secondaryColor
+
     },
-    zIndexButton:{
-     position: 'fixed',
-     top: '50%',
-     /* right: -56px; */
-     zIndex: 99999999,
-     transform: 'rotate(90deg)',
-     backgroundColor: 'red'
+    zIndexButton: {
+      position: 'fixed',
+      top: '50%',
+      /* right: -56px; */
+      zIndex: 99999999,
+
+      transform: 'rotate(90deg)',
+    },
+    paint: {
+      fontSize: '1.5em',
+      color: isToggled ? '#fad15f' : '#fff',
+      padding: '3%',
+      margin: '4%'
+      // color:'white'
     }
- }
+  }
   return (
     <div style={styles.container} >
-      {console.log("State Data :- ",state.primaryColor)}
       <div style={styles.zIndexButton}>
-      <button onClick={handleChange}>Dark</button>
+        <Switch onChange={handleChange} checked={isToggled} width={58} uncheckedIcon={<FontAwesomeIcon style={styles.paint} icon={faLightbulb} />} checkedIcon={<FontAwesomeIcon style={styles.paint} icon={faMoon} />} />
       </div>
-        <Slider state={state}/>
-        <Creativity state={state}/>
-        <WhatWeDo state={state}/>
-        <OurWork state={state}/>
-        <OurPortfolio state={state}/>
-        <WhatTheySay state={state}/>
-        <ContactFooter state={state}/>
-        <Footer state={state}/>
+      <Slider state={state} />
+      <Creativity state={state} />
+      <WhatWeDo state={state} />
+      <OurWork state={state} />
+      <OurPortfolio state={state} />
+      <WhatTheySay state={state} />
+      <ContactFooter state={state} />
+      <Footer state={state} />
     </div>
   );
 }

@@ -32,7 +32,6 @@ function SliderText(props) {
         }, 500);
         return () => clearInterval(interval);
     }, []);
-    console.log("props Data :- ",props.state.primaryText)
     const [title, setTitle] = useState("");
     const styles = {
         slider: {
