@@ -33,7 +33,9 @@ function App() {
   }
   const styles = {
     container: {
-      background: state.secondaryColor
+      background: state.secondaryColor,
+      width: '100vw',
+      overflowX:'hidden'
 
     },
     zIndexButton: {
