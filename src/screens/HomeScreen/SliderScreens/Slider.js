@@ -1,8 +1,6 @@
 import React, { component } from "react";
 import NavBar from "./Navbar";
 import SliderText from "./SliderText";
-import { COLORS, IMAGES } from "../../GlobalVariables";
-import lightLogo from '../../images/lighteyez.png'
 import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
 

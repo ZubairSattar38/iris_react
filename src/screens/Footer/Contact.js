@@ -15,13 +15,15 @@ function ContactFooter(props) {
             objectFit: 'cover',
         },
         btn: {
-            backgroundColor: props.state.primaryColor,
+            background: props.state.buttonColor,
+            borderRadius: '9%',
+            border: ' 1px solid white',
             color: props.state.primaryText,
             width: isTabletOrMobile?"100%":"32%",
             height: "40%",
             fontSize: 17,
             fontWeight: 800,
-            padding: "4%"
+            padding: "2%"
         },
         ContactFooter: {
             background: props.state.primaryColor,

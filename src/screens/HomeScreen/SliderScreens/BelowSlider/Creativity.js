@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Button.css';
 import { useMediaQuery } from 'react-responsive';
 
-function Creativity() {
+function Creativity(props) {
 
 
     const isDesktopOrLaptop = useMediaQuery({
@@ -68,12 +68,14 @@ function Creativity() {
             flex: 1
         },
         btn: {
-            backgroundColor: "black",
+            backgroundColor: props.state.buttonColor,
+            borderRadius:'4%',
             color: "white",
             width: "70%",
             height: "40%",
             fontSize: 17,
             fontWeight: 800,
+            marginBottom:'4%'
         },
         separator: {
             width: "20%",

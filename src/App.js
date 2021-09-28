@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Slider from './screens/SliderScreens/Slider';
-import Creativity from './screens/BelowSlider/Creativity';
-import WhatWeDo from './screens/WeDo/WhatWeDo';
-import OurWork from './screens/OurWork/OurWork';
-import OurPortfolio from './screens/OurWork/OurPortfolio';
-import WhatTheySay from './screens/Testimonials/WhatTheySay';
-import ContactFooter from './screens/Footer/Contact';
-import Footer from './screens/Footer/Footer';
 import { useDispatch } from "react-redux";
 import { colorChange } from "./redux/actions/colorAction";
 import store from './redux/store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import Switch from "react-switch";
+import ContactForm from './screens/ContactForm/FormSection/Form';
+import HomeScreen from './screens/HomeScreen';
+import Routing from './screens/Routing';
 
-// import {isDark} from './GlobalVariables'
 function App() {
   const dispatch = useDispatch();
   const [isToggled, setIsToggled] = useState(true);
@@ -22,9 +16,6 @@ function App() {
     dispatch(colorChange(true));
   }, []);
   const state = store.getState().color;
-
-
-
   const handleChange = () => {
     setIsToggled(!isToggled)
     dispatch(colorChange(!isToggled));
@@ -35,7 +26,7 @@ function App() {
     container: {
       background: state.secondaryColor,
       width: '100vw',
-      overflowX:'hidden'
+      overflowX: 'hidden'
 
     },
     zIndexButton: {
@@ -59,14 +50,7 @@ function App() {
       <div style={styles.zIndexButton}>
         <Switch onChange={handleChange} checked={isToggled} width={58} uncheckedIcon={<FontAwesomeIcon style={styles.paint} icon={faLightbulb} />} checkedIcon={<FontAwesomeIcon style={styles.paint} icon={faMoon} />} />
       </div>
-      <Slider state={state} />
-      <Creativity state={state} />
-      <WhatWeDo state={state} />
-      <OurWork state={state} />
-      <OurPortfolio state={state} />
-      <WhatTheySay state={state} />
-      <ContactFooter state={state} />
-      <Footer state={state} />
+      <Routing state={state}/>
     </div>
   );
 }

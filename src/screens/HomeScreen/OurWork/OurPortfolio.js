@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../GlobalVariables';
+import { COLORS } from '../../../GlobalVariables';
 import WorkColumn from './WorkColumn';
 import './Work.css'
 
@@ -40,9 +40,8 @@ const styles = {
         padding: 10,
         display: 'flex',
         justifyContent: 'flex-end',
-
+        alignItems:'flex-end',
         paddingLeft: '4%'
-
 
     }
 

@@ -11,7 +11,8 @@ const initialState = {
     primaryColor: '#000',
     grey: 'rgb(250, 250, 250)',
     midGrey:'#F2F2F2',
-    logoImage:lightLogo
+    logoImage:lightLogo,
+    buttonColor:'#5ba5f0'
     // your colors
 };
 const ColorReducer = (state = initialState, action) => {
@@ -34,7 +35,8 @@ const ColorReducer = (state = initialState, action) => {
                 primaryColor: action.payload?'#F2F2F2':'#000',
                 secondaryColor: action.payload?'#fff':'#fff',
                 secondaryText: action.payload?'#000':'#000',
-                logoImage: action.payload?darkLogo:lightLogo
+                logoImage: action.payload?darkLogo:lightLogo,
+                buttonColor:'#5ba5f0'
                 // isFail:false
             }
         default: return state;

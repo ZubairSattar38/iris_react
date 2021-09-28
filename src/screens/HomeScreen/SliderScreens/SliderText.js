@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS, IMAGES } from "../../GlobalVariables";
+import { COLORS, IMAGES } from "../../../GlobalVariables";
 import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
 

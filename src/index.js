@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.render(
 

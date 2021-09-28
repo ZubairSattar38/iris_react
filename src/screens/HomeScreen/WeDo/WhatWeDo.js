@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../GlobalVariables';
 import Services from './Services';
 import { useMediaQuery } from 'react-responsive';
 

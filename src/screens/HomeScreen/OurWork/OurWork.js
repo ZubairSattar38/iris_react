@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../GlobalVariables';
 import { useMediaQuery } from 'react-responsive';
 
 function OurWork(props) {

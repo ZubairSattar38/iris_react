@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../GlobalVariables';
 
 function Services(props) {
     const styles = {
