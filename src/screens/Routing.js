@@ -4,22 +4,24 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import ContactHeader from './ContactForm/Header/ContactHeader';
+import NavBar from './Navbar';
+import { useDispatch } from "react-redux";
+import { contactChange } from "../redux/actions/contactAction";
+import store from '../redux/store';
 
 function Routing(props) {
+    
+    const state = store.getState().contact;
     return (
-
         <Router>
+            {console.log("State Data :- ",state)}
+            <NavBar state={props.state} isContact={state.isContact} />
             <div>
-                
-
-                {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/contact">
-                        <ContactHeader state={props.state}/>
+                        <ContactHeader state={props.state} />
                     </Route>
                     <Route path="/">
                         <HomeScreen state={props.state} />
@@ -29,7 +31,4 @@ function Routing(props) {
         </Router>
     );
 }
-
-
-
 export default Routing;

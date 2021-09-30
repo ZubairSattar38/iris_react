@@ -7,7 +7,6 @@ import { useMediaQuery } from 'react-responsive';
 import ContactFooter from "../../Footer/Contact";
 import ContactForm from "../FormSection/Form";
 import Footer from "../../Footer/Footer";
-
 function ContactHeader(props) {
 
     const isDesktopOrLaptop = useMediaQuery({
@@ -58,8 +57,10 @@ function ContactHeader(props) {
                 <NavBar state={props.state} />
                 <div style={styles.textLogoWrapper}>
                     <div style={styles.ContactHeaderText}>
+
                         <h1>Contact US </h1>
-                        <p>Please help us to respond better to your query by filling out the relevant form.</p>                </div>
+                        <p>Please help us to respond better to your query by filling out the relevant form.</p>    
+                                    </div>
 
                 </div>
             </div>

@@ -50,13 +50,13 @@ function SliderText(props) {
 
         },
         sliderText_2: {
-            fontSize: isTabletOrMobile?10:isLargeScaleTablet?20:30,
+            fontSize: isTabletOrMobile?10:isLargeScaleTablet?20:40,
             fontWeight: isTabletOrMobile?500:800,
             color: props.state.primaryText,
             flex: 1,
-
         },
         iterativeText: {
+            fontFamily:"ArialicHollow",
             color: "#cacccf",
             textTransform: 'uppercase',
             webkitTextFillColor: 'transparent',
@@ -68,10 +68,13 @@ function SliderText(props) {
     return (
         <div style={styles.slider}>
             <div style={styles.sliderText_1}>
-                <p>  Welcome to EYEZ.</p>
+                <p>  Welcome to <span style={styles.iterativeText}>EYEZ.</span></p>
             </div>
             <div style={styles.sliderText_2}>
+            
+                {/* <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span> <br /> VISION</h1> */}
                 <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span> <br /> VISION</h1>
+
             </div>
         </div>
     )

@@ -1,8 +1,8 @@
 import React, { component } from "react";
-import NavBar from "./Navbar";
 import SliderText from "./SliderText";
 import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
+import Creativity from "./BelowSlider/Creativity";
 
 function Slider(props) {
 
@@ -22,12 +22,12 @@ function Slider(props) {
             display: 'flex',
             alignItems: 'center',
             flexWrap: 'wrap',
-            marginTop:'2%'
         },
         slider: {
             background: props.state.primaryColor,
             height: isBigScreen && '100vh',
-            flexWrap: 'wrap'
+            flexWrap: 'wrap',
+            paddingTop:'10%'
 
         },
         sliderText: {
@@ -45,8 +45,6 @@ function Slider(props) {
 
     return (
         <div style={styles.slider}>
-            {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
-            <NavBar state={props.state}/>
             <div style={styles.textLogoWrapper}>
                 <div style={styles.sliderText}>
                     <SliderText state={props.state}/>

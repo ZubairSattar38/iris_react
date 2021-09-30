@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useRef} from 'react';
 import './Button.css';
 import { useMediaQuery } from 'react-responsive';
 
 function Creativity(props) {
+    // const creativitySession = useRef(null);
+    // const gotoCreativitySession = () => window.scrollTo({top: creativitySession.current.offset,behavior:"smooth"})
 
 
     const isDesktopOrLaptop = useMediaQuery({
@@ -86,7 +88,7 @@ function Creativity(props) {
 
 
     return (
-        <div style={styles.belowSlider}>
+        <div style={styles.belowSlider}  >
             <div style={styles.textAnimation}>
                 <hr style={styles.separator} />
                 {title}

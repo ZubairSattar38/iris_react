@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Slider from './HomeScreen/SliderScreens/Slider';
 import Creativity from './HomeScreen/SliderScreens/BelowSlider/Creativity';
 import WhatWeDo from './HomeScreen/WeDo/WhatWeDo';
@@ -7,21 +7,26 @@ import OurPortfolio from './HomeScreen/OurWork/OurPortfolio';
 import WhatTheySay from './HomeScreen/Testimonials/WhatTheySay';
 import ContactFooter from './Footer/Contact';
 import Footer from './Footer/Footer';
-
-// import {isDark} from './GlobalVariables'
 function HomeScreen(props) {
-  return (
+    return (
         <>
-        <Slider state={props.state} />
-        <Creativity state={props.state} />
-        <WhatWeDo state={props.state} />
-        <OurWork state={props.state} />
-        <OurPortfolio state={props.state} />
-        <WhatTheySay state={props.state} />
-        <ContactFooter state={props.state} />
-        <Footer state={props.state} />
-    </>
-  );
+            <Slider state={props.state} />
+            <div id={'about'}>
+                <Creativity state={props.state} />
+            </div>
+
+            <div id={'ourServices'}>
+                <WhatWeDo state={props.state} />
+            </div>
+            <div id="project">
+                <OurWork state={props.state} />
+                <OurPortfolio state={props.state} />
+            </div>
+            <WhatTheySay state={props.state} />
+            <ContactFooter state={props.state} />
+            <Footer state={props.state} />
+        </>
+    );
 }
 
 

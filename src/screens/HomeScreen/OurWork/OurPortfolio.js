@@ -32,9 +32,12 @@ const styles = {
         flex: '50%',
         margin: 5,
         padding: 10,
+        border:'none'
+
         // justifyContent:'flex-start'
     },
     leftCard: {
+        border:'none',
         flex: '40%',
         margin: 5,
         padding: 10,

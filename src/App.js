@@ -5,8 +5,6 @@ import store from './redux/store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import Switch from "react-switch";
-import ContactForm from './screens/ContactForm/FormSection/Form';
-import HomeScreen from './screens/HomeScreen';
 import Routing from './screens/Routing';
 
 function App() {
@@ -26,7 +24,7 @@ function App() {
     container: {
       background: state.secondaryColor,
       width: '100vw',
-      overflowX: 'hidden'
+      overflowX: 'hidden',
 
     },
     zIndexButton: {
@@ -50,7 +48,7 @@ function App() {
       <div style={styles.zIndexButton}>
         <Switch onChange={handleChange} checked={isToggled} width={58} uncheckedIcon={<FontAwesomeIcon style={styles.paint} icon={faLightbulb} />} checkedIcon={<FontAwesomeIcon style={styles.paint} icon={faMoon} />} />
       </div>
-      <Routing state={state}/>
+      <Routing state={state} />
     </div>
   );
 }

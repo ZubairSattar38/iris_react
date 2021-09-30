@@ -1,7 +1,9 @@
 import { COLOR_CHANGE_REQUEST, COLOR_CHANGE_FAILURE, COLOR_CHANGE_SUCCESS } from "../types/colorTypes";
 import lightLogo from '../../images/lighteyez.png'
 import darkLogo from '../../images/darkeyez.png'
-import {IMAGES} from "../../GlobalVariables"
+import eyezWhiteWritten from '../../images/eyezWhiteWritten.png'
+import eyezBlackWritten from '../../images/eyezBlackWritten.png'
+
 const initialState = {
     isDark: true,
     isFail:false,
@@ -12,6 +14,7 @@ const initialState = {
     grey: 'rgb(250, 250, 250)',
     midGrey:'#F2F2F2',
     logoImage:lightLogo,
+    writtenlogo: eyezWhiteWritten,
     buttonColor:'#5ba5f0'
     // your colors
 };
@@ -36,6 +39,7 @@ const ColorReducer = (state = initialState, action) => {
                 secondaryColor: action.payload?'#fff':'#fff',
                 secondaryText: action.payload?'#000':'#000',
                 logoImage: action.payload?darkLogo:lightLogo,
+                writtenlogo: action.payload?eyezBlackWritten:eyezWhiteWritten,
                 buttonColor:'#5ba5f0'
                 // isFail:false
             }

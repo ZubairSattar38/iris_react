@@ -54,6 +54,10 @@ function Footer(props) {
             fontSize: '0.8rem',
             width: '70%',
             textAlign: 'end'
+        },
+        footerLogo:{
+            width: '50%',
+            marginTop: '1%'
         }
     }
 
@@ -61,7 +65,9 @@ function Footer(props) {
         <div style={styles.Footer} >
             <div style={styles.leftSide}>
                 <div style={styles.iris}>
-                    <h1>IRIS</h1>
+                <img src={props.state.writtenlogo} style={styles.footerLogo} />
+
+                    {/* <h1>IRIS</h1> */}
                 </div>
                 <span style={{ fontSize: 10 }}>Phone:+92-3167631138| Email:zubairsattar38@gmail.com | Powered by Zubair Sattar</span>
             </div>

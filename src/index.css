@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "ArialicHollow";
+  src: local("ArialicHollow"),
+   url("./fonts/Arialic_Hollow.ttf") format("truetype");
+  font-weight: bold;
+  }
