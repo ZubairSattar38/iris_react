@@ -59,7 +59,7 @@ function Reviews(props) {
 
                 <div style={styles.reviewLeftSide}>
                     <img style={styles.image} src={props.image} />
-                    <h1>{props.title}</h1>
+                    <h3>{props.title}</h3>
                 </div>
                 <div style={styles.multiButton}>
                     <div style={styles.desc}>

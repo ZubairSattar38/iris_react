@@ -1,12 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { COLORS } from '../../GlobalVariables';
 import { useMediaQuery } from 'react-responsive';
+import ReactWhatsapp from 'react-whatsapp';
+import FooterNavbar from './FooterMenu';
 
 function Footer(props) {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 983px)'
     })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
+
+    const [hover, setHover] = useState(false);
+    const [eyezHover, setEyezHover] = useState(false);
+
+    const handleMouseEnter = () => {
+        setHover(true);
+    }
+    const handleMouseLeave = () => {
+        setHover(false);
+    }
+    const handleEyezMouseEnter = () => {
+        setEyezHover(true);
+    }
+    const handleEyezMouseLeave = () => {
+        setEyezHover(false);
+    }
 
 
     const styles = {
@@ -55,9 +73,21 @@ function Footer(props) {
             width: '70%',
             textAlign: 'end'
         },
-        footerLogo:{
+        footerLogo: {
             width: '50%',
             marginTop: '1%'
+        },
+        whatsAppBtn: {
+            background: 'transparent',
+            border: 'none',
+            color: hover ? 'blue' : 'white',
+        },
+        eyezName: {
+            color: eyezHover ? 'blue' : 'white',
+        },
+        linkUseful:{
+            display: 'flex',
+            flexDirection:'column'
         }
     }
 
@@ -65,11 +95,11 @@ function Footer(props) {
         <div style={styles.Footer} >
             <div style={styles.leftSide}>
                 <div style={styles.iris}>
-                <img src={props.state.writtenlogo} style={styles.footerLogo} />
+                    <img src={props.state.writtenlogo} style={styles.footerLogo} />
 
                     {/* <h1>IRIS</h1> */}
                 </div>
-                <span style={{ fontSize: 10 }}>Phone:+92-3167631138| Email:zubairsattar38@gmail.com | Powered by Zubair Sattar</span>
+                <span style={{ fontSize: 10, marginBottom: '2%' }}>Powered by <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a></span>
             </div>
             <div style={styles.multiButton}>
                 <div>
@@ -78,17 +108,19 @@ function Footer(props) {
                     <p>Lahore</p>
                 </div>
 
+
                 <div>
-                    <h3>USEFUL LINKS</h3>
-                    <p>Home</p>
-                    <p>Blog</p>
+                    <h4>USEFUL LINKS</h4>
+                    <FooterNavbar state={props.state} />
                 </div>
                 <div>
                     <h3>Who we Are</h3>
                     <p>What We Do</p>
-                    <p>+92-3167631138</p>
+                    <ReactWhatsapp number={'+92-345-1021122'} message={'Hi I am From EYEZ'} style={styles.whatsAppBtn}>
+                        <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>+92-345-1021122</span>
+                    </ReactWhatsapp>
                 </div>
-            </div>
+                </div>
             <hr />
 
         </div>

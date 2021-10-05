@@ -16,7 +16,7 @@ function SliderText(props) {
     const isLargeScaleTablet = useMediaQuery({ query: '(max-width: 1092px)' })
 
     const titles = [
-        'CREATIVE', 'INSPIRING', 'PLAYFUL'
+        'Vision', 'Inspiration', 'Motivation', 'Imagination', 'Innovation'
     ]
     let value = 0;
     useEffect(() => {
@@ -63,17 +63,21 @@ function SliderText(props) {
             webkitTextStrokeWidth: 1,
             webkitTextStrokeColor: '#DBC2CF',
         },
+        letText:{
+            fontSize:16,
+            width:300,
+        }
     }
 
     return (
         <div style={styles.slider}>
-            <div style={styles.sliderText_1}>
-                <p>  Welcome to <span style={styles.iterativeText}>EYEZ.</span></p>
-            </div>
+            {/* <div style={styles.sliderText_1}>
+                <p>  Welcome to <span style={styles.iterativeText}>EYEZ</span></p>
+            </div> */}
             <div style={styles.sliderText_2}>
             
                 {/* <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span> <br /> VISION</h1> */}
-                <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span> <br /> VISION</h1>
+                <h1> <span style={styles.letText}>Let </span><br /> EYEZ <br/>be your <span className="cursorWriting" style={styles.iterativeText}>{title}</span></h1>
 
             </div>
         </div>

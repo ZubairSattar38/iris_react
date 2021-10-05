@@ -64,7 +64,7 @@ function WhatTheySay(props) {
                 </div>
             </div>
             <div style={styles.Review}>
-                <Reviews state={props.state} title="JOHN WATSON" image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/profile-img.png&nocache=1" desc="Coding Pixel brought to the table winning strategies that helped take my business to the next level. Our e-commerce efforts are now our leading driver of revenue after less than a year from launch." />
+                <Reviews state={props.state} title="MIAN MUHAMMAD MUDARRIB" image="https://codingpixel.com/wp-content/webpc-passthru.php?src=https://codingpixel.com/wp-content/uploads/2021/05/profile-img.png&nocache=1" desc="Eyezsoft helped me to excel and integrate multiple tasks of my trading business in to one piece of software.Now I can manage all activities of geographical distant warehouse from the comfort of my home.On time desicion of working with eyez soft helped to become Market leader in shortest period of time" />
             </div>
         </div>
     )

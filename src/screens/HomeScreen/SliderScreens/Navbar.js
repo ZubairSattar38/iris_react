@@ -40,8 +40,6 @@ function NavBar(props) {
                     <NavItem>
                         <NavLink style={styles.menuList} href="/contact">Contact Us</NavLink>
                     </NavItem>
-        
-
                 </Nav>
             </div>
         </div>
