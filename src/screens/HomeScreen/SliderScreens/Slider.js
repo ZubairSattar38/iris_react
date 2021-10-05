@@ -27,15 +27,13 @@ function Slider(props) {
             background: props.state.primaryColor,
             height: isBigScreen && '100vh',
             flexWrap: 'wrap',
-            paddingTop:'10%'
+            paddingTop:'10%',
+            paddingBottom:'10%'
 
         },
         sliderText: {
             flex: 1,
-            // alignItems:'center',
             flexWrap: 'wrap'
-
-
         },
         sliderLogo: {
             flex: 1,
@@ -50,7 +48,7 @@ function Slider(props) {
                     <SliderText state={props.state}/>
                 </div>
                 <div className="moveArrow" style={styles.sliderLogo}>
-                    <img src={props.state.logoImage} style={{ width: isTabletOrMobile ? '50%' : '60%',opacity:'0.2' }} />
+                    <img src={props.state.logoImage} style={{ width: isTabletOrMobile ? '40%' : '50%',opacity:'0.2' }} />
                 </div>
             </div>
         </div>

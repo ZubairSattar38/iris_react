@@ -40,8 +40,8 @@ function Footer(props) {
         Footer: {
             background: props.state.primaryColor,
             display: 'flex',
+            flexDirection:'column'
             // flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'row' : 'column',
-            height: '40vh',
         },
         iris: {
             fontSize: 15,
@@ -53,19 +53,17 @@ function Footer(props) {
             color: props.state.primaryText,
             paddingTop: '2%',
             paddingLeft: '12%',
-            display: 'flex',
-            flexDirection: 'column'
         },
         title: {
             fontSize: '3.5rem',
             fontWeight: 800
         },
         multiButton: {
-            flex: 2,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-around',
-            color: props.state.primaryText
+            display: !isTabletOrMobile&&'flex',
+            justifyContent: !isTabletOrMobile && 'space-around',
+            color: props.state.primaryText,
+            flex:2
+
         },
         desc: {
             color: props.state.primaryText,
@@ -74,7 +72,7 @@ function Footer(props) {
             textAlign: 'end'
         },
         footerLogo: {
-            width: '50%',
+            width: '10vw',
             marginTop: '1%'
         },
         whatsAppBtn: {
@@ -85,43 +83,55 @@ function Footer(props) {
         eyezName: {
             color: eyezHover ? 'blue' : 'white',
         },
-        linkUseful:{
+        linkUseful: {
             display: 'flex',
-            flexDirection:'column'
+            flexDirection: 'column'
+        },
+        usefulContainer: {
+            display: 'flex',
+            flexDirection: 'row',
+            marginLeft: isTabletOrMobile&&'9%',
+            justifyContent: 'space-around',
+            width: !isTabletOrMobile && '32vw',
+            alignItems: 'flex-start',
+            justifyContent: 'inherit'
+        },
+        poweredBy: {
+            fontSize: '0.7em', marginBottom: '2%', textAlign: 'center', color: 'white'
         }
     }
 
     return (
         <div style={styles.Footer} >
-            <div style={styles.leftSide}>
-                <div style={styles.iris}>
+            <div style={{ display: 'flex', flex:1,flexDirection: isTabletOrMobile && 'column', marginTop: '5%', marginBottom: '5%' }}>
+                <div style={styles.leftSide}>
                     <img src={props.state.writtenlogo} style={styles.footerLogo} />
-
-                    {/* <h1>IRIS</h1> */}
                 </div>
-                <span style={{ fontSize: 10, marginBottom: '2%' }}>Powered by <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a></span>
+                <div style={styles.multiButton}>
+                    <div style={{ margin: isTabletOrMobile && '9%' }}>
+                        <h3>OFFICES</h3>
+                        <p>Los Angeles</p>
+                        <p>Lahore</p>
+                    </div>
+
+                    <div style={styles.usefulContainer}>
+                        <div >
+                            <h4>USEFUL LINKS</h4>
+                            <FooterNavbar state={props.state} />
+                        </div>
+                        <div style={{ marginLeft:isTabletOrMobile&&'10%' }}>
+                            <h3>Who we Are</h3>
+                            <p>What We Do</p>
+                            <ReactWhatsapp number={'+92-345-1021122'} message={'Hi I am From EYEZ'} style={styles.whatsAppBtn}>
+                                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>+92-345-1021122</span>
+                            </ReactWhatsapp>
+                        </div>
+                    </div>
+
+                </div>
+                <hr />
             </div>
-            <div style={styles.multiButton}>
-                <div>
-                    <h3>OFFICES</h3>
-                    <p>Los Angeles</p>
-                    <p>Lahore</p>
-                </div>
-
-
-                <div>
-                    <h4>USEFUL LINKS</h4>
-                    <FooterNavbar state={props.state} />
-                </div>
-                <div>
-                    <h3>Who we Are</h3>
-                    <p>What We Do</p>
-                    <ReactWhatsapp number={'+92-345-1021122'} message={'Hi I am From EYEZ'} style={styles.whatsAppBtn}>
-                        <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>+92-345-1021122</span>
-                    </ReactWhatsapp>
-                </div>
-                </div>
-            <hr />
+            <span style={styles.poweredBy}>Powered by <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a></span>
 
         </div>
     )

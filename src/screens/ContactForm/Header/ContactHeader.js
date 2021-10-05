@@ -1,5 +1,4 @@
 import React, { component } from "react";
-import NavBar from "../../HomeScreen/SliderScreens/Navbar";
 // import ContactHeaderText from "./ContactHeaderText";
 import { COLORS, IMAGES } from "../../../GlobalVariables";
 // import lightLogo from '../../images/lighteyez.png'
@@ -54,7 +53,6 @@ function ContactHeader(props) {
         <div style={styles.container}>
             <div style={styles.ContactHeader}>
                 {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
-                <NavBar state={props.state} />
                 <div style={styles.textLogoWrapper}>
                     <div style={styles.ContactHeaderText}>
 
