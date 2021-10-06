@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../GlobalVariables';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import ReactWhatsapp from 'react-whatsapp';
 import FooterNavbar from './FooterMenu';
 
 function Footer(props) {
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 983px)'
-    })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
 
     const [hover, setHover] = useState(false);
@@ -40,8 +36,7 @@ function Footer(props) {
         Footer: {
             background: props.state.primaryColor,
             display: 'flex',
-            flexDirection:'column'
-            // flexDirection: isTabletOrMobile ? 'column' : isDesktopOrLaptop ? 'row' : 'column',
+            flexDirection: 'column'
         },
         iris: {
             fontSize: 15,
@@ -59,10 +54,10 @@ function Footer(props) {
             fontWeight: 800
         },
         multiButton: {
-            display: !isTabletOrMobile&&'flex',
+            display: !isTabletOrMobile && 'flex',
             justifyContent: !isTabletOrMobile && 'space-around',
             color: props.state.primaryText,
-            flex:2
+            flex: 2
 
         },
         desc: {
@@ -78,10 +73,10 @@ function Footer(props) {
         whatsAppBtn: {
             background: 'transparent',
             border: 'none',
-            color: hover ? 'blue' : 'white',
+            color: hover ? props.state.buttonColor : 'white',
         },
         eyezName: {
-            color: eyezHover ? 'blue' : 'white',
+            color: eyezHover ? props.state.buttonColor : 'white',
         },
         linkUseful: {
             display: 'flex',
@@ -90,8 +85,7 @@ function Footer(props) {
         usefulContainer: {
             display: 'flex',
             flexDirection: 'row',
-            marginLeft: isTabletOrMobile&&'9%',
-            justifyContent: 'space-around',
+            marginLeft: isTabletOrMobile && '9%',
             width: !isTabletOrMobile && '32vw',
             alignItems: 'flex-start',
             justifyContent: 'inherit'
@@ -103,7 +97,7 @@ function Footer(props) {
 
     return (
         <div style={styles.Footer} >
-            <div style={{ display: 'flex', flex:1,flexDirection: isTabletOrMobile && 'column', marginTop: '5%', marginBottom: '5%' }}>
+            <div style={{ display: 'flex', flex: 1, flexDirection: isTabletOrMobile && 'column', marginTop: '5%', marginBottom: '5%' }}>
                 <div style={styles.leftSide}>
                     <img src={props.state.writtenlogo} style={styles.footerLogo} />
                 </div>
@@ -119,7 +113,7 @@ function Footer(props) {
                             <h4>USEFUL LINKS</h4>
                             <FooterNavbar state={props.state} />
                         </div>
-                        <div style={{ marginLeft:isTabletOrMobile&&'10%' }}>
+                        <div style={{ marginLeft: isTabletOrMobile && '10%' }}>
                             <h3>Who we Are</h3>
                             <p>What We Do</p>
                             <ReactWhatsapp number={'+92-345-1021122'} message={'Hi I am From EYEZ'} style={styles.whatsAppBtn}>

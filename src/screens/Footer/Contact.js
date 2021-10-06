@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { COLORS } from '../../GlobalVariables';
+import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 function ContactFooter(props) {
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 983px)'
-    })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
-
-
     const styles = {
         wrapper: {
             backgroundImage: `url("https://htmlcssmonk.com/wp-content/uploads/2020/12/screen-post-LJUaTzKtFNc-unsplash-1024x640.jpg")`,
@@ -30,10 +24,8 @@ function ContactFooter(props) {
             opacity: 0.8,
             display: 'flex',
             flexDirection: isTabletOrMobile&&'column',
-            // flexDirection: isDesktopOrLaptop && 'column',
             paddingBottom:'5%',
             alignItems: !isTabletOrMobile&&'center',
-            // height: '40vh'
     
         },
         ourService: {
@@ -58,7 +50,6 @@ function ContactFooter(props) {
         desc: {
             color:props.state.primaryText,
             fontSize: '0.8rem',
-            // width: '70%',
             textAlign: 'center'
         }
     }
@@ -72,18 +63,12 @@ function ContactFooter(props) {
                     <h1>Let’s Start Something &nbsp;
                         Completely New Together</h1>
                 </div>
-                {/* <div style={styles.title}> */}
                     <span>Drop Us A Line, And We’ll Get In Touch. We’ll See If
                         We’re A Match And How We Can Help Each Other.</span>
-                {/* </div> */}
             </div>
             <div style={styles.multiButton}>
                 <div style={styles.desc}>
                       <button style={styles.btn}>Creativity</button>
-
-                    {/* <p>
-                        With hundreds of projects completed for industry-leading clients, we’ve done almost every type of project. Many of which became award winners and made us proud.
-                    </p> */}
                 </div>
             </div>
             <hr/>

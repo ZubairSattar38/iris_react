@@ -1,24 +1,9 @@
-import React, { component } from "react";
-// import ContactHeaderText from "./ContactHeaderText";
-import { COLORS, IMAGES } from "../../../GlobalVariables";
-// import lightLogo from '../../images/lighteyez.png'
-import { useMediaQuery } from 'react-responsive';
+import React from "react";
 import ContactFooter from "../../Footer/Contact";
 import ContactForm from "../FormSection/Form";
 import Footer from "../../Footer/Footer";
 function ContactHeader(props) {
 
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 983px)'
-    })
-    const isBigScreen = useMediaQuery({ query: '(min-width: 1114px)' })
-
-    const isLargeScaleTablet = useMediaQuery({ query: '(min-width: 1092px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
-
-    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-    // alert("Primary Color :- ",props.primaryColor)
     const styles = {
         textLogoWrapper: {
             display: 'flex',
@@ -34,7 +19,6 @@ function ContactHeader(props) {
         },
         ContactHeaderText: {
             flex: 1,
-            // alignItems:'center',
             color: props.state.primaryText,
             flexWrap: 'wrap'
         }, container: {
@@ -52,7 +36,6 @@ function ContactHeader(props) {
     return (
         <div style={styles.container}>
             <div style={styles.ContactHeader}>
-                {/* <iframe src="//static.iohk.io/fluid2/"></iframe> */}
                 <div style={styles.textLogoWrapper}>
                     <div style={styles.ContactHeaderText}>
 

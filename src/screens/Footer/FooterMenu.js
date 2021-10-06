@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 function FooterNavbar(props) {
     const styles = {
@@ -9,26 +9,23 @@ function FooterNavbar(props) {
     }
 
     return (
-       
-                <Nav style={{flexDirection:'column'}}>
-                    {/* <NavItem>
-                        <NavLink style={styles.menuList} href="/">Home</NavLink>
-                    </NavItem> */}
-                    {!props.isContact && <><NavItem>
-                        <NavLink style={styles.menuList} href="/#about">About Us</NavLink>
-                    </NavItem>
-                        <NavItem>
-                            <NavLink style={styles.menuList} href="/#ourServices">Our Services</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink style={styles.menuList} href="/#project">Projects</NavLink>
-                        </NavItem></>}
 
-                    <NavItem>
-                        <NavLink style={styles.menuList} href="/contact">Contact Us</NavLink>
-                    </NavItem>
-                </Nav>
-       
+        <Nav style={{ flexDirection: 'column' }}>
+            {!props.isContact && <><NavItem>
+                <NavLink style={styles.menuList} href="/#about">About Us</NavLink>
+            </NavItem>
+                <NavItem>
+                    <NavLink style={styles.menuList} href="/#ourServices">Our Services</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink style={styles.menuList} href="/#project">Projects</NavLink>
+                </NavItem></>}
+
+            <NavItem>
+                <NavLink style={styles.menuList} href="/contact">Contact Us</NavLink>
+            </NavItem>
+        </Nav>
+
     )
 }
 

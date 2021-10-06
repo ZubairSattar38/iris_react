@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 function Reviews(props) {
@@ -13,6 +13,7 @@ function Reviews(props) {
             width: '25%',
             marginTop: '-8%',
             position: 'relative',
+            borderRadius: '57%',
         },
         review: {
             display: 'flex',

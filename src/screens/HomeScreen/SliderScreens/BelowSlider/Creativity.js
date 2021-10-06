@@ -96,7 +96,7 @@ function Creativity(props) {
 
             <div style={styles.multiButton}>
                 <p style={{ fontWeight: 500 }}>
-                    The Coding Pixel hallmark is enterprise-level, bespoke digital products development. We are one of the leading software and app development companies in USA backed by a strong workforce of software, app and web developers. Coding Pixel started its journey 8 years ago to fulfill the purpose of developing quality digital products in real terms. Our primary business model is based on custom software development projects delivered at competitive cost
+                    The Eyez hallmark is enterprise-level, bespoke digital products development. We are one of the leading software and app development companies in USA backed by a strong workforce of software, app and web developers. Eyez started its journey 8 years ago to fulfill the purpose of developing quality digital products in real terms. Our primary business model is based on custom software development projects delivered at competitive cost
                 </p>
                 <div style={styles.btnContainer}>
                     <div style={styles.creativity}>

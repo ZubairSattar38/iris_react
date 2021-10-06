@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faBars } from '@fortawesome/free-solid-svg-icons'
 
 function NavBar(props) {
     const [collapsed, setCollapsed] = useState(true);
     const toggleNavbar = () => setCollapsed(!collapsed);
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 983px)'
-    })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
     const styles = {
         navbar: {

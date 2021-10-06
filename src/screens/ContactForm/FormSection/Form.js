@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {Row, Col } from 'reactstrap';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import emailjs from 'emailjs-com';
@@ -38,12 +38,6 @@ const ContactForm = (props) => {
     return (
         <Row>
             <Col >
-                {/* <h1> Tell Us About Your Project </h1>
-                Looking forward to hearing from you.
-                Let’s arrange a chat about your project.
-
-                Phone
-                1-310-299-0870 */}
                 <iframe src="https://www.google.com.qa/maps/d/u/1/embed?mid=1mWnoErXFpuZb6vgRzJ3SDuT4nJl8n66P" width="100%" height="480"></iframe>
             </Col>
             <Col>

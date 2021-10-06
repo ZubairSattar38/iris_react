@@ -17,8 +17,6 @@ function App() {
   const handleChange = () => {
     setIsToggled(!isToggled)
     dispatch(colorChange(!isToggled));
-
-    // setDark(!isDark);
   }
   const styles = {
     container: {
@@ -30,7 +28,6 @@ function App() {
     zIndexButton: {
       position: 'fixed',
       top: '50%',
-      /* right: -56px; */
       zIndex: 99999999,
 
       transform: 'rotate(90deg)',
@@ -40,13 +37,12 @@ function App() {
       color: isToggled ? '#fad15f' : '#fff',
       padding: '3%',
       margin: '4%'
-      // color:'white'
     }
   }
   return (
     <div style={styles.container} >
       <div style={styles.zIndexButton}>
-        <Switch onChange={handleChange} checked={isToggled} width={58} uncheckedIcon={<FontAwesomeIcon style={styles.paint} icon={faLightbulb} />} checkedIcon={<FontAwesomeIcon style={styles.paint} icon={faMoon} />} />
+        <Switch onChange={handleChange} checked={isToggled} width={58} uncheckedIcon={<FontAwesomeIcon style={styles.paint} icon={faLightbulb} />}  checkedIcon={<FontAwesomeIcon style={styles.paint} icon={faMoon} />} />
       </div>
       <Routing state={state} />
     </div>

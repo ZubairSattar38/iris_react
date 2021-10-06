@@ -4,7 +4,7 @@ function WorkColumn(props) {
     return (
         <div style={styles.ourWork}>
             <div style={styles.image}>
-                <img src={props.image} style={{width: '50vh'}}/>
+                <img src={props.image} style={{width: '100%'}}/>
             </div>
             <div style={styles.title}>
                 <h1>{props.title}</h1>
@@ -25,6 +25,7 @@ const styles = {
     },
     image:{
         flex: 1,
+        alignItems:'center'
     },
     title:{
         flex: 1,

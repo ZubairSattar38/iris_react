@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import HomeScreen from './HomeScreen';
 import {
     BrowserRouter as Router,
@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import ContactHeader from './ContactForm/Header/ContactHeader';
 import NavBar from './Navbar';
-import { useDispatch } from "react-redux";
-import { contactChange } from "../redux/actions/contactAction";
 import store from '../redux/store';
 
 function Routing(props) {
