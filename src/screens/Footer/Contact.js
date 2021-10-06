@@ -68,7 +68,9 @@ function ContactFooter(props) {
             </div>
             <div style={styles.multiButton}>
                 <div style={styles.desc}>
-                      <button style={styles.btn}>Creativity</button>
+                    <a style={styles.btn} href='/contact'>Creativity</a>
+                      {/* <button  href="/contact">Creativity</button> */}
+
                 </div>
             </div>
             <hr/>
