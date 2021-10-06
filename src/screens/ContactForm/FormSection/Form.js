@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import emailjs from 'emailjs-com';
@@ -50,7 +50,6 @@ const ContactForm = (props) => {
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
                     </FormGroup>
-
                     <FormGroup>
                         <PhoneInput
                             international

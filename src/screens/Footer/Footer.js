@@ -79,6 +79,8 @@ function Footer(props) {
         },
         eyezName: {
             color: eyezHover ? props.state.buttonColor : 'white',
+            fontWeight:'bold',
+            textDecoration:'none'
         },
         linkUseful: {
             display: 'flex',
@@ -127,7 +129,7 @@ function Footer(props) {
                 </div>
                 <hr />
             </div>
-            <span style={styles.poweredBy}> Copyright <FontAwesomeIcon style={styles.paint} icon={faCopyright} /> <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a></span>
+            <span style={styles.poweredBy}> Copyright <i class="fa fa-copyright"></i>  {new Date().getFullYear()} <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a> | All Rights Reserved</span>
 
         </div>
     )
