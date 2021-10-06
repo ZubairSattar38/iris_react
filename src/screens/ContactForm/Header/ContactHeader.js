@@ -9,8 +9,8 @@ function ContactHeader(props) {
             display: 'flex',
             alignItems: 'center',
             flexWrap: 'wrap',
-            marginTop: '2%',
-            margin: '3vw',
+            margin: '5%',
+            // margin: '3vw',
             fontSize: 20
         },
         ContactHeader: {

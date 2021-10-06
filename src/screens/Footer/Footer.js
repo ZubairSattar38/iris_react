@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import ReactWhatsapp from 'react-whatsapp';
 import FooterNavbar from './FooterMenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 
 function Footer(props) {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 740px)' })
@@ -116,7 +118,7 @@ function Footer(props) {
                         <div style={{ marginLeft: isTabletOrMobile && '10%' }}>
                             <h3>Who we Are</h3>
                             <p>What We Do</p>
-                            <ReactWhatsapp number={'+92-345-1021122'} message={'Hi I am From EYEZ'} style={styles.whatsAppBtn}>
+                            <ReactWhatsapp number={'+92-345-1021122'} message={'Hello EYEZ,I want to discuss something'} style={styles.whatsAppBtn}>
                                 <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>+92-345-1021122</span>
                             </ReactWhatsapp>
                         </div>
@@ -125,7 +127,7 @@ function Footer(props) {
                 </div>
                 <hr />
             </div>
-            <span style={styles.poweredBy}>Powered by <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a></span>
+            <span style={styles.poweredBy}> Copyright <FontAwesomeIcon style={styles.paint} icon={faCopyright} /> <a href="/" onMouseEnter={handleEyezMouseEnter} onMouseLeave={handleEyezMouseLeave} style={styles.eyezName}>EYEZ SOFT</a></span>
 
         </div>
     )

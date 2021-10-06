@@ -65,7 +65,7 @@ function WhatTheySay(props) {
                 </div>
             </div>
             <div style={styles.Review}>
-                <Reviews state={props.state} title="MIAN MUHAMMAD MUDARRIB" image={client} desc="Eyezsoft helped me to excel and integrate multiple tasks of my trading business in to one piece of software.Now I can manage all activities of geographical distant warehouse from the comfort of my home.On time desicion of working with eyez soft helped to become Market leader in shortest period of time" />
+                <Reviews state={props.state} title="M.MUHAMMAD MUDARRIB" image={client} desc="Eyezsoft helped me to excel and integrate multiple tasks of my trading business in to one piece of software.Now I can manage all activities of geographical distant warehouse from the comfort of my home.On time desicion of working with eyez soft helped to become Market leader in shortest period of time" />
             </div>
         </div>
     )

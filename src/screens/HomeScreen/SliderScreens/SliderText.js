@@ -4,17 +4,8 @@ import './Slider.css'
 import { useMediaQuery } from 'react-responsive';
 
 function SliderText(props) {
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 983px)'
-    })
-    const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 820px)' })
-
-    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-
     const isLargeScaleTablet = useMediaQuery({ query: '(max-width: 1092px)' })
-
     const titles = [
         'Vision', 'Inspiration', 'Motivation', 'Imagination', 'Innovation'
     ]
@@ -77,7 +68,7 @@ function SliderText(props) {
             <div style={styles.sliderText_2}>
             
                 {/* <h1 >YOUR DIGITAL <br /> STORY. <br />OUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span> <br /> VISION</h1> */}
-                <h1> <span style={styles.letText}>Let </span><br /> EYEZ <br/>be your <span className="cursorWriting" style={styles.iterativeText}>{title}</span></h1>
+                <h1> <span style={styles.letText}>Let </span><br /> EYEZ <br/>BE YOUR <span className="cursorWriting" style={styles.iterativeText}>{title}</span></h1>
 
             </div>
         </div>
